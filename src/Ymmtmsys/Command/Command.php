@@ -23,7 +23,7 @@ class Command
      *      return status of the executed command
      *      will be written to this variable.
      */
-    protected $return_var = array();
+    protected $return_var = 0;
 
     /**
      * @param  string $command The command that will be executed.

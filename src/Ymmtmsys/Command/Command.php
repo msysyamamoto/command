@@ -7,6 +7,47 @@
  * @copyright Copyright (c) 2012 ymmtmsys
  * @license   http://www.opensource.org/licenses/mit-license.php MIT
  * @link      https://github.com/ymmtmsys/command
+ *
+ *
+ * This class is intended to make it easy to perform a unit test.
+ * 
+ * `````````````````````````````````````
+ * <?php
+ * //
+ * // It is difficult to perform Unit test.
+ * //
+ * class Foobar 
+ * {
+ *     public function dummy()
+ *     {
+ *         // before process ...
+ * 
+ *         exec($command, $output, $returnvar);
+ * 
+ *         // after process  ...
+ *     }
+ * }
+ * 
+ * //
+ * // Practice of Unit test becomes easy by using Command class. 
+ * //
+ * class Hoover 
+ * {
+ *     public function __construct($cmd) // $cmd is a Command instance
+ *     {
+ *         $this->cmd = $cmd;
+ *     }
+ * 
+ *     public function dam()
+ *     {
+ *         // before process ...
+ * 
+ *         $this->cmd->exec($command);
+ * 
+ *         // after process  ...
+ *     }
+ * }
+ * `````````````````````````````````````
  */
 namespace Ymmtmsys\Command;
 

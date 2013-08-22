@@ -72,6 +72,9 @@ class Command
      */
     public function exec($command)
     {
+        $this->output = array();
+        $this->return_var = 0;
+        
         return exec($command, $this->output, $this->return_var);
     }
 

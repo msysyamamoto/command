@@ -37,4 +37,19 @@ class CommandTest extends \PHPUnit_Framework_TestCase
         $this->assertSame(array(), $this->obj->output);
         $this->assertSame(123, $this->obj->return_var);
     }
+
+    /**
+     * @test
+     */
+    public function consistencyOfTheOutputVariable()
+    {
+        $command = 'echo hello';
+
+        for ($i = 0; $i < 2; $i++) {
+            $this->obj->exec($command);
+        }
+
+        $this->assertSame(array('hello'), $this->obj->output);
+        $this->assertSame(0, $this->obj->return_var);
+    }
 }

@@ -1,5 +1,5 @@
-Coomand
-=======
+Comand
+======
 
 Command to facilitate the execution of external programs in unit testing.
 

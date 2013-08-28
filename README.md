@@ -34,7 +34,7 @@ class FooTest extends \PHPUnit_Framework_TestCase
 {
     public function testBar()
     {
-        $mock_cmd = this->getMock('Command', array('exec'));
+        $mock_cmd = $this->getMock('Command', array('exec'));
 
         $obj = new Foo($mock_cmd);
 
